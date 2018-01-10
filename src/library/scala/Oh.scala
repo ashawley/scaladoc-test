@@ -32,4 +32,7 @@ object Oh {
   /** One of [[scala.Long]]. */
   def One = 1l
 
+  /** xml of [[scala.xml.Elem]] */
+  val xml: scala.xml.Elem = <o/>
+
 }
