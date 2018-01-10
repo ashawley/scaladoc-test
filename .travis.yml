@@ -13,6 +13,7 @@ script:
 
 jdk:
  - oraclejdk8
+ - oraclejdk9
 
 before_cache:
  - find $HOME/.sbt -name "*.lock" | xargs rm
