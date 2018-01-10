@@ -1,6 +1,8 @@
 Scaladoc test project
 =====================
 
+[![Build Status](https://travis-ci.org/ashawley/scaladoc-test.svg?branch=apiMappings)](https://travis-ci.org/ashawley/scaladoc-test)
+
     $ sbt
     > ++2.12.4
     [info] Setting version to 2.12.4
@@ -27,3 +29,20 @@ Scaladoc test project
     [warn]   ^
     [warn] four warnings found
     [info] Main Scala API documentation successful.
+
+Publish on GitHub pages:
+
+    $ cd target
+    $ git init
+    Initialized empty Git repository in ./scaladoc-test/target/.git/
+    $ git remote add origin git@github.com:ashawley/scaladoc-test.git
+    $ git fetch origin gh-pages
+    From github.com:ashawley/scaladoc-test
+     * branch            gh-pages   -> FETCH_HEAD
+     * [new branch]      gh-pages   -> origin/gh-pages
+    $ git checkout gh-pages
+    Branch gh-pages set up to track remote branch gh-pages from origin.
+    Switched to a new branch 'gh-pages'
+    $ git add index.html
+    $ git add -A scala-2.{11,12}/api/
+    $ git commit
